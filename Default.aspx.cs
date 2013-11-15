@@ -60,8 +60,7 @@ namespace WebApplicationOAuth {
       // OAuth2RefreshToken key in your App.config / Web.config.
       AdWordsAppConfig config = user.Config as AdWordsAppConfig;
       if (config.AuthorizationMethod == AdWordsAuthorizationMethod.OAuth2) {
-        if (user.Config.OAuth2Mode == OAuth2Flow.APPLICATION &&
-              string.IsNullOrEmpty(config.OAuth2RefreshToken)) {
+        if ((user.Config.OAuth2Mode == OAuth2Flow.APPLICATION) && (string.IsNullOrEmpty(config.OAuth2RefreshToken))) {
           Response.Redirect("OAuthLogin.aspx");
         }
       } else {

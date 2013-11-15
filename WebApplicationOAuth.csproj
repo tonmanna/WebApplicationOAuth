@@ -38,6 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Google.Ads.Common, Version=1.9.0.0, Culture=neutral, PublicKeyToken=52807268f2b614dc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.Ads.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.AdWords, Version=16.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Google.AdWords.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -165,16 +173,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\src\AdWords\AdWords.csproj">
-      <Project>{50c9cc2a-0664-4cfa-b72d-aee6c91bd745}</Project>
-      <Name>AdWords</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\src\Common\Common.csproj">
-      <Project>{277404db-a439-4450-b3a5-186294cdf245}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
